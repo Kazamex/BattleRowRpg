@@ -2,13 +2,18 @@
     <head>
         <meta charset="UTF-8">
         <link rel= "stylesheet" href="css/estilo.css">
+        <script type="text/javascript" src="js/iniciarCombate.js"></script>
     </head>
     <body>
         <div id="div">
             <table id="tabelaCombate" border="solid 1px">
             </table>
         </div>
-        <script src="js/iniciarCombate.js"></script>
+        <script>
+            window.onload = function teste(){
+                return iniciarCombate();
+            };
+        </script>
         <button class="navigateButton" onclick="window.location.href = 'principal.html'">Voltar</button>
     </body>
 </html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type= "text/javascript" src="js/code.js"></script>
+        <link rel= "stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <h2>
+            Informe as criaturas para o combate:
+        </h2>
+        <form id="myForm" method="POST" action="batalha.html">
+            <div id="headers">
+                <div class="w50px center">ID</div>
+                <div class="txtCriatura">Criatura</div>
+                <div class="w50px">Inic.</div>
+                <div class="w50px">Qt.</div>
+                <div class="w50px">Dex</div>
+                <div class="txtHP">HP</div>
+                <button type="button" onclick="addInput('lines')">Add</button>
+            </div>
+            <div id="lines"></div>
+            <div>
+                <input id="submit" type="submit" value="Iniciar Combate">
+            </div>
+        </form>
+        <script src="js/localStorage.js">
+        </script>
+        <script>
+            window.onload = function comecar(){
+                return addInput('lines');
+            };
+        </script>
+    </body>
+</html>

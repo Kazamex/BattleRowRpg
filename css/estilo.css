@@ -10,65 +10,48 @@
     margin: 0px 4px 0 0px;
 }
 
-.center{
+.center, #tabelaCombate td{
     text-align: center;
+}
+
+
+/* Table Columns,Inputs Sizes */
+input, td, div, button{
+    font-size: 20px;
+}
+
+td{
+    padding:5px;
 }
 
 .w50px{
     width:50px;
 }
 
-.txtCriatura{
-    width: 200px;
-}
-
 .txtHP{
     width:70px;
 }
 
-#lines input{
-    margin: 5px 5px;
-    font-size:20px;
-    display: inline-block;
-}
-#lines div{
-    margin: 2px 0px;
-    font-size:20px;
-    display: inline-block;
-}
-
-#submit{
-    font-size:20px;
-    margin:30px 0 0 10px;
-}
-
-#tabelaCombate td{
-    padding:5px 5px;
-    text-align: center;
-    font-size: 20px;
-}
-#tabelaCombate input{
-    font-size: 20px;
+.txtCriatura{
+    width: 200px;
 }
 
 .txtLocal{
     width:250px;
 }
 
-.txtHPAtual{
-    width:70px;
+#lines input{
+    margin: 5px;
+    display: inline-block;
 }
 
-.celulaCriatura{
-    width:200px;
+#lines div{
+    margin: 5px 0;
+    display: inline-block;
 }
 
-.celulaHP{
-    width:50px;
-}
-
-.botaoVoltar{
-    font-size:20px;
-    padding:5px 30px;
-    margin-top:200px;
+/* Navigate Buttons */
+.navigateButton{
+    padding:5px 20px;
+    margin:100px 0 0 20px;
 }

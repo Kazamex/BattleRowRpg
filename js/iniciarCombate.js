@@ -49,7 +49,7 @@
     });
     //(Math.floor(Math.random() * 20 )+1)
     var element = document.getElementById('tabelaCombate');
-    element.innerHTML += '<tr><td>ID</id><td class="celulaCriatura">Criatura</td><td>Inic.</td><td>Dex</td><td>Rng</td><td class="txtLocal">Posição</td><td class="txtHPAtual">HP</td><td>M</td><td>Del.</td></tr>';
+    element.innerHTML += '<tr><td>ID</id><td class="txtCriatura">Criatura</td><td>Inic.</td><td>Dex</td><td>Rng</td><td class="txtLocal">Posição</td><td class="txtHPAtual">HP</td><td>M</td><td>Del.</td></tr>';
     criaturas.forEach(criatura => {
         element.innerHTML +='<tr id="tr'+ cont +'"><td>'+cont+'</td>'+
                             '<td>'+criatura.nome +'</td>'+
@@ -57,7 +57,7 @@
                             '<td>'+criatura.dex+'</td>'+
                             '<td>'+criatura.rng+'+'+criatura.iniciativa+'</td>'+
                             '<td><input class="txtLocal" type="text" maxlength="20"></td>'+
-                            '<td><input class="txtHPAtual" type="number" value="'+criatura.hp+'"></td>'+
+                            '<td><input class="txtHP" type="number" value="'+criatura.hp+'"></td>'+
                             '<td><input type="checkbox"></td>'+
                             '<td><button type="button" onclick="deletar('+ cont +')">Del</input></td></tr>';
         cont++;

@@ -65,10 +65,10 @@ function iniciarCombate(){
                             '<td>'+criatura.iniciativa +'</td>'+
                             '<td>'+criatura.dex+'</td>'+
                             '<td>'+criatura.pos+'</td>'+
-                            '<td><input class="txtLocal" type="text" maxlength="20"></td>'+
-                            '<td><input class="txtHP" type="number" value="'+criatura.hp+'"></td>'+
+                            '<td><input class="txtLocal buttonAdd" type="text" maxlength="20"></td>'+
+                            '<td><input class="txtHP buttonAdd" type="number" value="'+criatura.hp+'"></td>'+
                             '<td><input type="checkbox"></td>'+
-                            '<td><button type="button" onclick="deleteRow('+ cont +')">Del</input></td></tr>';
+                            '<td><button class="buttonAdd" type="button" onclick="deleteRow('+ cont +')">Del</input></td></tr>';
         cont++;
     });
     

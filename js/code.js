@@ -13,6 +13,7 @@ function addInput() {
         newdiv.innerHTML += '<input class="w50px" maxlength="2" type="number" name="quantidade'+line +'" id="quantidade'+line +'">';
         newdiv.innerHTML += '<input class="w50px" maxlength="2" type="number" name="dex'+line +'" id="dex'+line +'">';
         newdiv.innerHTML += '<input class="txtHP" maxlength="4" type="number" name="hp'+line +'" id="hp'+line +'">';
+        newdiv.innerHTML += '<div class="manualCheck"><input type="checkbox" value="teste" name="manual'+line +'" id="manual'+line +'"></div>';
         document.getElementById('lines').appendChild(newdiv);
         line++;
     }
@@ -27,17 +28,19 @@ function iniciarCombate(){
         let quantidade = parseInt(criatura.quantidade);
         for(i=1;i<=quantidade;i++){
             let rng = rollD20();
-            let newPos = rng + parserInt(criatura.iniciativa);
+            let newPos;
             let nomeCriatura;
             if (quantidade == 1){ nomeCriatura = criatura.nome;}
             else{                 nomeCriatura = criatura.nome+" "+i;}
-
+            if (criatura.manual == true){newPos = parserInt(criatura.iniciativa)}
+            else{newPos = rng + parserInt(criatura.iniciativa);}
             criaturas.push({
                 nome: nomeCriatura,
                 iniciativa: parserInt(criatura.iniciativa),
                 dex: parserInt(criatura.dex),
                 rng: rng,
                 hp: criatura.hp,
+                manual: criatura.manual,
                 pos: newPos
             });
         }
@@ -61,7 +64,7 @@ function iniciarCombate(){
                             '<td>'+criatura.nome +'</td>'+
                             '<td>'+criatura.iniciativa +'</td>'+
                             '<td>'+criatura.dex+'</td>'+
-                            '<td>'+criatura.rng+'+'+criatura.iniciativa+'</td>'+
+                            '<td>'+criatura.pos+'</td>'+
                             '<td><input class="txtLocal" type="text" maxlength="20"></td>'+
                             '<td><input class="txtHP" type="number" value="'+criatura.hp+'"></td>'+
                             '<td><input type="checkbox"></td>'+

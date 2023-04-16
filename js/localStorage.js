@@ -9,6 +9,7 @@
                     quantidade : document.querySelector("input[name=quantidade"+i+"]").value,
                     dex : document.querySelector("input[name=dex"+i+"]").value,
                     hp : document.querySelector("input[name=hp"+i+"]").value,
+                    manual : document.querySelector("input[name=manual"+i+"]").checked,
                 });
             };
         };
